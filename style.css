@@ -1,0 +1,128 @@
+* {
+  --fontItens: 'Hind', sans-serif;
+  --fontPlaceHolders: 'Sour Gummy', sans-serif;
+  --fontBtns: 'Edu AU VIC WA NT Pre', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  text-align: center;
+
+}
+
+.upperScreen {
+  display: none;
+  position: absolute;
+  background-color: rgba(31, 31, 31, 0.603);
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 60px;
+  padding: 3%;
+  font-family: var(--fontPlaceHolders);
+}
+
+input {
+  border-radius: 10px;
+  text-align: center;
+  height: 40px;
+  font-size: 30px;
+  font-family: var(--fontPlaceHolders);
+
+  &.amount {
+    width: 15%;
+  }
+
+  &.item {
+    width: 70%;
+  }
+}
+
+.containerBtns {
+
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-around;
+
+  & button {
+
+    border-radius: 10px;
+    font-family: var(--fontBtns);
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+    border: 1px solid blad;
+
+    &:hover {
+      box-shadow: 1px 1px 10px;
+    }
+
+    &.btnClear {
+      background-color: rgba(214, 104, 104, 0.795);
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    &.btnAdd {
+      background-color: rgba(211, 223, 54, 0.795);
+
+      &:hover {
+        color: green;
+      }
+    }
+  }
+}
+
+#headerList,
+.card {
+  display: grid;
+  grid-template: auto / 1fr 1fr 3fr 0.5fr;
+  width: 90%;
+  justify-self: center;
+  align-content: center;
+  background-color: rgba(214, 213, 213, 0.411);
+  font-size: 20px;
+  font-family: var(--fontItens);
+
+}
+
+hr {
+  margin: 2px;
+  width: 90%;
+  justify-self: center;
+}
+
+#headerList {
+  grid-template: auto / 1fr 1fr 3.5fr;
+  border-radius: 10px;
+  margin-top: 5%;
+  justify-content: center;
+
+  & p {
+    border: 1px solid black;
+    font-weight: bolder;
+  }
+}
+
+.borderItem {
+  border: 1px solid black;
+}
+
+.btnDel {
+  font-size: 80%;
+  color: red;
+  border: none;
+
+  &:hover {
+    border: 1px solid red;
+    border-radius: 50%;
+    padding: 5%;
+  }
+}
