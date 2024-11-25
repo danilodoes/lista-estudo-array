@@ -4,30 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/styleModal.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Hind:wght@300;400;500;600;700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
   <title>Lista com Array</title>
 </head>
 
 <body>
-  <div class="upperScreen"></div>
-
-  <header>
-
-    <div>
-      <h1>Lista</h1>
-      <input class="amount" type="number" placeholder="Qtd">
-      <input class="item" type="text" placeholder="Item">
-      <div class="containerBtns">
-        <button class="btnClear">Limpar</button>
-        <button class="btnAdd">Adicionar</button>
-      </div>
+  <section class="upperScreen">
+    <div class="alertEmptyFields">
+      <h1>ERRO</h1>
+      <p>Os campos não podem estar vazios</p>
+      <button class="btnOK allBtns">OK</button>
     </div>
-  </header>
 
-  <main>
+    <div class="alertClearList">
+      <h1>CONFIRME</h1>
+      <p>Você quer limpar toda a lista?</p>
+      <div class="containerBtnsClearList">
+        <button class="btnYES allBtns">SIM</button>
+        <button class="btnNO allBtns">NÃO</button>
+      </div>
+  </section>
+
+  <section id="mainContainerList">
+    <header>
+      <div>
+        <h1>Lista</h1>
+        <input class="amount" type="number" placeholder="Qtd">
+        <input class="item" type="text" placeholder="Item">
+        <div class="containerBtns">
+          <button class="btnClear allBtns">Limpar</button>
+          <button class="btnAdd allBtns">Adicionar</button>
+        </div>
+      </div>
+    </header>
+
     <section id="headerList">
       <p>ID</p>
       <p>QTD</p>
@@ -36,12 +51,11 @@
     <hr>
     <div id="containerList">
     </div>
+  </section>
 
-
-  </main>
-  <script src="./script.js"></script>
-  <script src="./interface.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 
 
 </html>
+</div>

@@ -1,0 +1,61 @@
+.upperScreen {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(31, 31, 31, 0.603);
+  width: 100vw;
+  height: 100vh;
+}
+
+.alertEmptyFields,
+.alertClearList {
+
+  font-family: var(--fontPlaceHolders);
+  font-size: large;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background: radial-gradient(farthest-corner, rgba(105, 236, 171, 0.795), rgba(22, 236, 226, 0.795));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+  z-index: 1;
+}
+
+.alertClearList {
+  display: none;
+}
+
+.alertEmptyFields {
+  display: none;
+
+  & button {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: 4%;
+  }
+}
+
+.containerBtnsClearList {
+  width: 100%;
+
+  & button {
+    width: 40%;
+    margin: 4%;
+
+    &.btnYES:hover {
+      background-color: green;
+      color: white;
+    }
+
+    &.btnNO:hover {
+      background-color: red;
+      color: white;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 # Lista-estudo-array
 
-- Projeto sem modelo, iniciei afim de praticar conceitos fundamentais na estrutura de arrays e manipulação de elementos no DOM.
+- Iniciei esse projeto sem modelo, para praticar conceitos fundamentais na estrutura de arrays e manipulação de elementos no DOM.
+- Utilizei GRID e conceitos de classes aninhadas para melhor leitura e organização do CSS.
+- Todo o código está comentado e modularizado considerando salvar tempo em manutenções futuras.
 
 ## Objetivo do Projeto 🎯
 
@@ -14,8 +16,8 @@
 - CSS 3
 - JS
 
-<!-- ## Demo 📷
+## Demo 📷
 
 <p align="left">
-  <img width="500" src="./toReadme/jv.gif">
-</p> -->
+  <img width="300" src="lista.gif">
+</p>
