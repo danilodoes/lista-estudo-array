@@ -34,31 +34,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Cria a primeira div (id)
     const divId = document.createElement('div');
-    divId.setAttribute('data-firstcol', true);
     divId.classList.add('borderItem');
     divId.textContent = id;
 
     //Cria a segunda div (quantidade)
     const divAmount = document.createElement('div');
-    divAmount.setAttribute('data-firstcol', false);
     divAmount.classList.add('borderItem');
     divAmount.textContent = amount;
 
     //Cria a terceira div(item)
     const divItem = document.createElement('div');
-    divItem.setAttribute('data-firstcol', false);
     divItem.classList.add('borderItem');
     divItem.textContent = item;
 
     //Cria a quarta div e o botão (campo para exclusão)
     const divDelete = document.createElement('div');
-    divDelete.setAttribute('data-firstcol', false);
     divDelete.classList.add('borderItem');
 
     //Adicionando o botão para deletar cada linha
     const btnDel = document.createElement('button');
     btnDel.classList.add('btnDel');
     btnDel.textContent = "X";
+    btnDel.onclick = () => deleteItem(id);
 
     //Adiciona as 4 divs dentro da div card (pra formar uma linha)
     divCard.appendChild(divId);
@@ -71,6 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
     containerList.appendChild(divCard);
 
   };
+  function deleteItem(index) {
+    clearScreen();
+    list.splice(index, 1);
+    createLinesOnTable();
+  };
+
 
   //Limpar a lista da TELA
   function clearScreen() {
@@ -80,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     };
   };
+
 
   //Apagar todos os dados do array
   function clearList() {
@@ -105,6 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
     alertEmptyFields.style.display = displayEmptyFields;
   };
 
+  //Cria as linhas da tabela através do array list
+  function createLinesOnTable() {
+    list.map((elemento, index) => {
+      createCard(index, elemento.amount, elemento.item);
+    });
+  }
+
   //Aguarda o click no botão "Adicionar" para atualizar a lista
   btnAdd.onclick = () => {
 
@@ -117,9 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'del': 'X',
       });
 
-      list.map((elemento, index) => {
-        createCard(index, elemento.amount, elemento.item);
-      });
+      createLinesOnTable();
       clearFields();
 
     } else {
@@ -130,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     };
   };
-
 
   //Limpar Lista (tanto em tela quanto array)
   btnClear.onclick = () => {
